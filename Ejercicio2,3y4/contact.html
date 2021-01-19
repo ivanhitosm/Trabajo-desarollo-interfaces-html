@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Formulario</h1>
+    <h2>de inscripcion al club</h2>
+    <label for="file">Progreso del formulario</label>
+    <progress id="file" value="32" max="100">32%</progress>
+    <p>
+      <label for="user1">Nombre</label>
+      <input
+        type="text"
+        required
+        name="user1"
+        id="user1"
+        placeholder="Nombre"
+        autofocus
+      />
+    </p>
+    <p>
+      <label for="email">Email</label>
+      <input
+        type="email"
+        required
+        id="email"
+        name="email"
+        minlength="13"
+        maxlength="30"
+      />
+    </p>
+
+    <p>
+      <label for="pass1">Contraseña</label>
+      <input
+        id="pass1"
+        type="password"
+        required
+        name="pass1"
+        minlength="8"
+        pattern="[0-9]+[a-z0-9._%+-]+[A-Z]$"
+        title="8 o mas caracteres , debe empezar con un numero y acabar con una letra"
+      />
+    </p>
+    
+    <fieldset>
+      <legend>
+        ¿Tienes mascotas?<abbr title="Este campo es obligatorio">*</abbr>
+      </legend>
+      <input type="radio" required id="radio1" name="radio1" value="si" /><label
+        for="radio1"
+        >Si</label
+      >
+      <input type="radio" required id="radio2" name="radio1" value="no" /><label
+        for="radio2"
+        >No</label
+      >
+      <br />
+      <label for="user1">Numero de mascotas</label>
+      <input type="number" required min="0" max="10" />
+    </fieldset>
+
+    <p>
+      <label for="color">¿Cuál es tu color favorito?</label>
+      <input type="color" id="color" name="color" />
+    </p>
+    
+    <p>Ciudad de origen</p>
+    <input id="form-person-title" type="text" list="mylist" />
+
+    <datalist id="mylist">
+      <option label="Alva" value="Alva"></option>
+      <option label="Alvacete" value="Alvacete"></option>
+      <option label="Almeria" value="Almeria"></option>
+      <option label="Asturias" value="Asturias"></option>
+      <option label="Menorca" value="Menorca"></option>
+    </datalist>
+
+    <p>
+      <label for="myfile">Documentos</label>
+      <input type="file" id="myfile" name="myfile" />
+    </p>
+    <p>
+      <button type="submit">Enviar</button>
+    </p>
+  </body>
+</html>
